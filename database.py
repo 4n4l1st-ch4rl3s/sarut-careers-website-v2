@@ -6,7 +6,8 @@ password = config.password
 host = config.host
 database = config.database
 
-db_connection_string = "mysql+pymysql://"+username+":"+password+"@"+host+"/"+database+"?charset=utf8mb4"
+# db_connection_string = "mysql+pymysql://"+username+":"+password+"@"+host+"/"+database+"?charset=utf8mb4"
+db_connection_string = os.environ.get("config")
 
 engine = create_engine(
     db_connection_string,
