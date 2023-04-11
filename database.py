@@ -1,11 +1,11 @@
 from sqlalchemy import create_engine,text
 import os
-import config
+# import config
 
-username = config.username
-password = config.password
-host = config.host
-database = config.database
+# username = config.username
+# password = config.password
+# host = config.host
+# database = config.database
 
 # db_connection_string = "mysql+pymysql://"+username+":"+password+"@"+host+"/"+database+"?charset=utf8mb4"
 db_connection_string = os.environ.get("config")
